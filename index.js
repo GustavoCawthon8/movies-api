@@ -17,6 +17,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+//rota para ativar api
+app.get("/", (req, res)=>{
+    res.send("api working");
+})
+
 //routes
 app.use("/movies", movieRoute);
 
